@@ -30,15 +30,15 @@ pipeline {
         }
         stage('Docker Login') {
             steps {
-                  bat 'docker login -u tarantula050504@gmail.com -p taru22251A3630'
+                  bat 'docker login -u tarantula050504 -p taru22251A3630'
                 }
             }
         stage('push Docker Image to Docker Hub') {
             steps {
                 echo "push Docker Image to Docker Hub"
-                bat "docker tag seleniumdemoapp:v1 tarantula050504@gmail.com/sample:seleniumtestimage"               
+                bat "docker tag seleniumdemoapp:v1 tarantula050504/sample:seleniumtestimage"               
                     
-                bat "docker push bhavani765/sample:seleniumtestimage"
+                bat "docker push tarantula050504/sample:seleniumtestimage"
                 
             }
         }
